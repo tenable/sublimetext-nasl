@@ -48,15 +48,6 @@
 			<string>"</string>
 			<key>name</key>
 			<string>string.quoted.double.nasl</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\.</string>
-					<key>name</key>
-					<string>constant.character.escape.nasl</string>
-				</dict>
-			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
