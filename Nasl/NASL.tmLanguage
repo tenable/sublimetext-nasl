@@ -6,6 +6,7 @@
 	<array>
 		<string>nasl</string>
 		<string>inc</string>
+		<string>tool</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>/\*\*|\{\s*$</string>
@@ -68,30 +69,35 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(^\s*)(function)(?:\s+|(\s*&amp;\s*))(?:|([a-zA-Z0-9_]+))\s*(\()</string>
+			<string>(^\s*)(public|private)?\s+(function)(?:\s+|(\s*&amp;\s*))(?:|([a-zA-Z0-9_~]+))\s*(\()</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.function.nasl</string>
+					<string>storage.type.modifier.nasl</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.method.nasl</string>
+					<string>storage.type.function.nasl</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>support.function.magic.nasl</string>
+					<string>storage.type.method.nasl</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.nasl</string>
+					<string>support.function.magic.nasl</string>
 				</dict>
 				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.nasl</string>
+				</dict>
+				<key>6</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.definition.parameters.begin.nasl</string>
@@ -111,8 +117,29 @@
 			<string>meta.function.nasl</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>^\s*(object)\s+([a-zA-Z0-9_]+)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.modifier.nasl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.nasl</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\{</string>
+			<key>name</key>
+			<string>meta.class.nasl</string>
+		</dict>
+		<dict>
 			<key>match</key>
-			<string>\b(local_var|global_var)\b</string>
+			<string>\b(local_var|global_var|var)\b</string>
 			<key>name</key>
 			<string>storage.type.nasl</string>
 		</dict>
