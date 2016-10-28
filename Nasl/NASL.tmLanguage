@@ -21,6 +21,15 @@
 			<string>#line_comment</string>
 		</dict>
 		<dict>
+			<key>begin</key> <string>\s*/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key> <dict> <key>name</key> <string>punctuation.definition.comment.nasl</string> </dict>
+			</dict>
+			<key>end</key> <string>\*/</string>
+			<key>name</key> <string>comment.block.nasl</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>^=</string>
 			<key>captures</key>
@@ -214,7 +223,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>^((#).*$\n?)</string>
+					<string>^((#|//).*$\n?)</string>
 					<key>name</key>
 					<string>meta.comment.full-line.nasl</string>
 				</dict>
@@ -228,7 +237,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(#).*$\n?</string>
+					<string>(#|//).*$\n?</string>
 					<key>name</key>
 					<string>comment.line.number-sign.perl</string>
 				</dict>
