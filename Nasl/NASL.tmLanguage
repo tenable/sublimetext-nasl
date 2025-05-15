@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>name</key>
-    <string>nasl</string>
+    <string>NASL</string>
     <key>scopeName</key>
     <string>source.nasl</string>
     <key>fileTypes</key>
